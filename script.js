@@ -37,16 +37,3 @@ if (!("ontouchstart" in window)) {
     elem.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
   });
 }
-
-// Dynamically set body padding based on navbar height
-function setBodyPadding() {
-  const nav = document.querySelector("nav");
-  const navHeight = nav.offsetHeight;
-  document.body.style.paddingTop = `${navHeight}px`;
-}
-
-// Run on page load
-setBodyPadding();
-
-// Run on window resize to handle navbar height changes
-window.addEventListener("resize", setBodyPadding);
