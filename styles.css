@@ -10,7 +10,7 @@ body {
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 80px; /* Fallback value; will be overridden by JS */
+  padding-top: 200px; /* Increased to ensure content is below navbar on mobile */
 }
 
 .cursor {
@@ -36,12 +36,13 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 30px; /* Reduced padding for better mobile fit */
+  padding: 10px 20px; /* Reduced padding for consistency */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
+  height: auto; /* Let the height adjust based on content */
 }
 
 nav .logo {
@@ -61,7 +62,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 15px; /* Reduced margin for mobile */
+  margin-left: 15px;
 }
 
 nav ul li a {
@@ -77,7 +78,7 @@ nav ul li a:hover {
 
 section {
   min-height: 100vh;
-  padding: 80px 50px; /* Adjusted padding */
+  padding: 80px 50px 80px 50px; /* Added top padding to ensure content isn’t hidden */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -603,6 +604,7 @@ a:hover {
 @media (max-width: 768px) {
   body {
     cursor: default;
+    padding-top: 180px; /* Slightly reduced but still enough for mobile */
   }
 
   .cursor {
@@ -626,8 +628,7 @@ a:hover {
   }
 
   section {
-    padding: 60px 20px;
-    min-height: 100vh;
+    padding: 60px 20px 60px 20px; /* Adjusted padding */
   }
 
   .hero-content h1 {
@@ -687,6 +688,10 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 200px; /* Ensure enough space on smaller screens */
+  }
+
   nav ul li a {
     font-size: 16px;
   }
