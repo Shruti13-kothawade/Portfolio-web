@@ -10,7 +10,7 @@ body {
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 80px; /* Fallback value; will be overridden by JS */
 }
 
 .cursor {
@@ -36,13 +36,12 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 50px;
+  padding: 15px 30px; /* Reduced padding for better mobile fit */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  height: 80px;
 }
 
 nav .logo {
@@ -62,7 +61,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 15px; /* Reduced margin for mobile */
 }
 
 nav ul li a {
@@ -77,8 +76,8 @@ nav ul li a:hover {
 }
 
 section {
-  min-height: calc(100vh - 80px);
-  padding: 100px 50px;
+  min-height: 100vh;
+  padding: 80px 50px; /* Adjusted padding */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +283,7 @@ a:hover {
 /* Projects Section */
 #projects {
   background: #1a1a1a;
-  padding: 100px 50px;
+  padding: 80px 50px;
 }
 
 #projects h5 {
@@ -604,7 +603,6 @@ a:hover {
 @media (max-width: 768px) {
   body {
     cursor: default;
-    padding-top: 120px;
   }
 
   .cursor {
@@ -612,25 +610,24 @@ a:hover {
   }
 
   nav {
-    padding: 15px 20px;
+    padding: 10px 20px;
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
   }
 
   nav ul {
     flex-direction: column;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   section {
     padding: 60px 20px;
-    min-height: calc(100vh - 120px);
+    min-height: 100vh;
   }
 
   .hero-content h1 {
@@ -690,16 +687,8 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  body {
-    padding-top: 140px;
-  }
-
   nav ul li a {
     font-size: 16px;
-  }
-
-  section {
-    min-height: calc(100vh - 140px);
   }
 
   .hero-content h1 {
